@@ -79,8 +79,8 @@ def add_task(self):
 * 'add_task' **method**: Handles adding a new task.
 * **'task = self.task_entry.get()'**: Retrieves the text from the entry widget.
 * **'if task != "":'**: Checks if the input is not empty.
--     **'self.tasks.append(task)'**: Adds the task to the list.
--     **'self.update_task_listbox()'**: Updates the listbox to reflect the new task.
--     **'self.task_entry.delete(0, tk.END)'**: Clears the entry widget.
--     **'self.save_tasks()'**: Saves the tasks to the file.
+     **'self.tasks.append(task)'**: Adds the task to the list.
+     **'self.update_task_listbox()'**: Updates the listbox to reflect the new task.
+     **'self.task_entry.delete(0, tk.END)'**: Clears the entry widget.
+     **'self.save_tasks()'**: Saves the tasks to the file.
 * **'else'**: Shows a warning message if the input is empty.
