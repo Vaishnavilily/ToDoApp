@@ -136,3 +136,15 @@ def save_tasks(self):
 * 'save_tasks' **method**: Saves the current list of tasks to the file.
     * **'with open(self.tasks_file, 'w') as file'**: Opens the file in write mode.
     * **'for task in self.tasks'**: Loops through the tasks and writes each to the file, followed by a newline character.
+
+### Running the Application
+```python
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = ToDoApp(root)
+    root.mainloop()
+```
+* **if __name__ == "__main__"** : Ensures that this block runs only if the script is executed directly (not imported as a module).
+* **'root = tk.Tk()'**: Creates the root window.
+* **'app = ToDoApp(root)'**: Creates an instance of ToDoApp and passes the root window to it.
+* **'root.mainloop()'**: Starts the Tkinter event loop, which waits for user interactions.
