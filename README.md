@@ -48,9 +48,9 @@ class ToDoApp:
 
         self.update_task_listbox()
 ```
-> **Class ToDoApp*: This class encapsulates all the functionality for the to-do list application.
-> **__init__ method*: This is the constructor method which is called when an instance of the class is created.
-> **self.root*: Reference to the root window of the application.
+> **Class ToDoApp**: This class encapsulates all the functionality for the to-do list application.
+> **__init__ method**: This is the constructor method which is called when an instance of the class is created.
+> **self.root**: Reference to the root window of the application.
 > **self.root.title("To-Do List")*: Sets the title of the application window.
 > **self.tasks*: A list to store the tasks.
 > **self.tasks_file*: Name of the file where tasks will be saved.
