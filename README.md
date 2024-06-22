@@ -149,4 +149,5 @@ if __name__ == "__main__":
 * **'app = ToDoApp(root)'**: Creates an instance of ToDoApp and passes the root window to it.
 * **'root.mainloop()'**: Starts the Tkinter event loop, which waits for user interactions.
 
+
 This structure allows the application to load tasks from a file, display them in a GUI, add new tasks, delete tasks, and save the tasks back to the file, ensuring persistence across sessions.
