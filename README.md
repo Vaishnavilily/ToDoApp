@@ -84,3 +84,21 @@ def add_task(self):
      * **'self.task_entry.delete(0, tk.END)'**: Clears the entry widget.
      * **'self.save_tasks()'**: Saves the tasks to the file.
 * **'else'**: Shows a warning message if the input is empty.
+
+### Deleting a Task
+```python
+def delete_task(self):
+    try:
+        selected_task_index = self.task_listbox.curselection()[0]
+        del self.tasks[selected_task_index]
+        self.update_task_listbox()
+        self.save_tasks()
+    except IndexError:
+        messagebox.showwarning("Warning", "You must select a task to delete.")
+```
+* **'delete_task method'**: Handles deleting a selected task.
+    * **'selected_task_index = self.task_listbox.curselection()[0]'**: Gets the index of the selected task in the listbox.
+    * **'del self.tasks[selected_task_index]'**: Deletes the task from the list.
+    * **'self.update_task_listbox()'**: Updates the listbox to reflect the deletion.
+    * **'self.save_tasks()'**: Saves the tasks to the file.
+    * **'except IndexError'**: Catches the error if no task is selected and shows a warning message.
