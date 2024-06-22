@@ -48,18 +48,18 @@ class ToDoApp:
 
         self.update_task_listbox()
 ```
-**Class ToDoApp**: This class encapsulates all the functionality for the to-do list application.
-**__init__ method**: This is the constructor method which is called when an instance of the class is created.
-**self.root**: Reference to the root window of the application.
-**self.root.title("To-Do List")*: Sets the title of the application window.
-**self.tasks*: A list to store the tasks.
-**self.tasks_file*: Name of the file where tasks will be saved.
-**self.load_tasks()*: Loads tasks from the file when the application starts.
-**UI setup*: Creates and packs various Tkinter widgets for the GUI.
-**self.frame*: A Frame widget to contain the listbox and scrollbar.
-**self.task_listbox*: A Listbox widget to display the tasks.
-**self.scrollbar*: A Scrollbar widget to scroll through the tasks in the listbox.
-**self.task_entry*: An Entry widget to input new tasks.
+* **Class ToDoApp**: This class encapsulates all the functionality for the to-do list application.
+* **__init__ method**: This is the constructor method which is called when an instance of the class is created.
+* **self.root**: Reference to the root window of the application.
+* **self.root.title("To-Do List")**: Sets the title of the application window.
+* **self.tasks**: A list to store the tasks.
+* **self.tasks_file**: Name of the file where tasks will be saved.
+* **self.load_tasks()**: Loads tasks from the file when the application starts.
+* **UI setup**: Creates and packs various Tkinter widgets for the GUI.
+* **self.frame**: A Frame widget to contain the listbox and scrollbar.
+* **self.task_listbox**: A Listbox widget to display the tasks.
+* **self.scrollbar**: A Scrollbar widget to scroll through the tasks in the listbox.
+* **self.task_entry**: An Entry widget to input new tasks.
 **self.add_task_button*: A Button widget to add new tasks.
 **self.delete_task_button*: A Button widget to delete selected tasks.
 **self.update_task_listbox()*: Updates the listbox with current tasks.
