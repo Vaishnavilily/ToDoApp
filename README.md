@@ -60,6 +60,27 @@ class ToDoApp:
 * **self.task_listbox**: A Listbox widget to display the tasks.
 * **self.scrollbar**: A Scrollbar widget to scroll through the tasks in the listbox.
 * **self.task_entry**: An Entry widget to input new tasks.
-**self.add_task_button*: A Button widget to add new tasks.
-**self.delete_task_button*: A Button widget to delete selected tasks.
-**self.update_task_listbox()*: Updates the listbox with current tasks.
+* **self.add_task_button*: A Button widget to add new tasks.
+* **self.delete_task_button*: A Button widget to delete selected tasks.
+* **self.update_task_listbox()*: Updates the listbox with current tasks.
+
+### Adding a Task
+```python
+def add_task(self):
+    task = self.task_entry.get()
+    if task != "":
+        self.tasks.append(task)
+        self.update_task_listbox()
+        self.task_entry.delete(0, tk.END)
+        self.save_tasks()
+    else:
+        messagebox.showwarning("Warning", "You must enter a task.")
+```
+* 'add_task' **method**: Handles adding a new task.
+task = self.task_entry.get(): Retrieves the text from the entry widget.
+if task != "":: Checks if the input is not empty.
+self.tasks.append(task): Adds the task to the list.
+self.update_task_listbox(): Updates the listbox to reflect the new task.
+self.task_entry.delete(0, tk.END): Clears the entry widget.
+self.save_tasks(): Saves the tasks to the file.
+else: Shows a warning message if the input is empty.
