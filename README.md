@@ -102,3 +102,14 @@ def delete_task(self):
     * **'self.update_task_listbox()'**: Updates the listbox to reflect the deletion.
     * **'self.save_tasks()'**: Saves the tasks to the file.
     * **'except IndexError'**: Catches the error if no task is selected and shows a warning message.
+
+### Updating the ListBox
+```python
+def update_task_listbox(self):
+    self.task_listbox.delete(0, tk.END)
+    for task in self.tasks:
+        self.task_listbox.insert(tk.END, task)
+```
+* 'update_task_listbox' **method**: Updates the listbox with the current list of tasks.
+    * **'self.task_listbox.delete(0, tk.END)'**: Clears all items in the listbox.
+    * **'for task in self.tasks'**: Loops through the tasks and inserts them into the listbox.
