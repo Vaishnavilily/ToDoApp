@@ -125,3 +125,14 @@ def load_tasks(self):
     * **'if os.path.exists(self.tasks_file)'**: Checks if the tasks file exists.
     * **'with open(self.tasks_file, 'r') as file'**: Opens the file in read mode.
     * **'self.tasks = file.read().splitlines()'**: Reads the file and splits it into lines, each representing a task.
+
+### Saving Tasks To File
+```python
+def save_tasks(self):
+    with open(self.tasks_file, 'w') as file:
+        for task in self.tasks:
+            file.write(task + '\n')
+```
+* 'save_tasks' **method**: Saves the current list of tasks to the file.
+    * **'with open(self.tasks_file, 'w') as file'**: Opens the file in write mode.
+    * **'for task in self.tasks'**: Loops through the tasks and writes each to the file, followed by a newline character.
