@@ -113,3 +113,15 @@ def update_task_listbox(self):
 * 'update_task_listbox' **method**: Updates the listbox with the current list of tasks.
     * **'self.task_listbox.delete(0, tk.END)'**: Clears all items in the listbox.
     * **'for task in self.tasks'**: Loops through the tasks and inserts them into the listbox.
+
+### Loading Tasks From File
+```python
+def load_tasks(self):
+    if os.path.exists(self.tasks_file):
+        with open(self.tasks_file, 'r') as file:
+            self.tasks = file.read().splitlines()
+```
+* 'load_tasks' **method**: Loads tasks from the file when the application starts.
+    * **'if os.path.exists(self.tasks_file)'**: Checks if the tasks file exists.
+    * **'with open(self.tasks_file, 'r') as file'**: Opens the file in read mode.
+    * **'self.tasks = file.read().splitlines()'**: Reads the file and splits it into lines, each representing a task.
